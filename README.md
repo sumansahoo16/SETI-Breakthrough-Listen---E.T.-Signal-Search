@@ -12,21 +12,21 @@ There are 6 channels in the images of shape (6, 273, 256) where 273 is the time 
 ## Solution
 
 At the beggining of the competition tried different approaches (use all channels, only 0,2,4, with vstack and without it). So, the best option was to use only 0,2,4 channels with vstack.
-Also had a lot of experiments with img size and found that bigger resolution can improve results (512x512 and 672x672).
+Also had a lot of experiments with img size and found that bigger resolution can improve results (512x512 /  672x672 / 896x896).
 
 Augmentation:
--HorizontalFlip, VerticalFlip
--ShiflScaleRotate
--RandomResizedCrop (scale 0.9)
--IAAAdditiveGaussianNoise (scale 0.15)
--MixUp
--Shuffle the [0,2,4] channel as augmentation
+- HorizontalFlip, VerticalFlip
+- ShiflScaleRotate
+- RandomResizedCrop (scale 0.9)
+- IAAAdditiveGaussianNoise (scale 0.15)
+- MixUp
+- Shuffle the [0,2,4] channel as augmentation
+
 
 Models:
--efficientnet_b0
--efficientnet_b5
--efficientnetv2m 
-
+- efficientnet_b0
+- efficientnet_b5
+- efficientnetv2m 
 
 
 
